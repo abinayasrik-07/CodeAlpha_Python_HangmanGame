@@ -7,7 +7,8 @@
 2. Setting Up the Game:
    - The player starts with 6 attempts (`attempts = 6`).
    - The `finding_word` variable stores the randomly selected word.
-   - An empty `display` list is created to represent the word with underscores (`_`) for each letter, showing what the player has guessed correctly so far.
+   - An empty `display` list is created to represent the word with underscores (`_`) for each letter, 
+   showing what the player has guessed correctly so far.
 
 3. Gameplay Loop:
    - The game runs in a loop until `end_game` is set to `True`.
@@ -18,12 +19,15 @@
      - The hangman’s current stage (visual representation) is printed based on the remaining attempts.
    - The game ends in one of two ways:
      - If the player runs out of attempts (`attempts == 0`), they lose, and the game ends with a "You Lose!!!" message.
-     - If the player correctly guesses all the letters in the word (no underscores left in `display`), they win, and the game ends with a "You Win!!!" message.
+     - If the player correctly guesses all the letters in the word (no underscores left in `display`), 
+     they win, and the game ends with a "You Win!!!" message.
 
 4. Hangman Stages:
-   - The hangman drawing updates after each incorrect guess, providing visual feedback on how many guesses remain before the game is lost.
+   - The hangman drawing updates after each incorrect guess, providing visual feedback on 
+   how many guesses remain before the game is lost.
 
-This game allows players to guess letters one at a time to uncover a hidden word, with the challenge of not exceeding the maximum allowed incorrect guesses.'''
+This game allows players to guess letters one at a time to uncover a hidden word, with the challenge of not 
+exceeding the maximum allowed incorrect guesses.'''
 
 
 import random
