@@ -27,27 +27,27 @@ This game allows players to guess letters one at a time to uncover a hidden word
 
 
 import random
-import hangman_stages
-import words_file
+import HangmanStages
+import HangmanWords
 
 attempts = 6
-finding_word = random.choice(words_file.words)
+finding_word = random.choice(HangmanWords.words)
 print(finding_word)
 display = []
 
 for i in range(len(finding_word)):
     display += '_'
-print(display)
+print("\n",display)
 
 end_game = False
 
 while not end_game:
-    guessed_letter = input("Guess a Letter of Colour: ").lower()
+    guessed_letter = input("\nGuess a Letter of Colour: ").lower()
     for position in range(len(finding_word)):
         letter = finding_word[position]
         if letter == guessed_letter:
             display[position] = guessed_letter
-    print(display)
+    print("\n",display)
 
     if guessed_letter not in finding_word:
         attempts -= 1
@@ -58,4 +58,4 @@ while not end_game:
     if '_' not in display:
         end_game = True
         print("\nYou Win!!!")
-    print(hangman_stages.stages[attempts])
+    print(HangmanStages.stages[attempts])
